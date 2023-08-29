@@ -16,7 +16,13 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.wrapper {
+main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+main .wrapper {
   height: 500px;
   width: 600px;
   border-radius: 20px;
@@ -27,7 +33,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .wrapper {
+  main .wrapper {
     height: 80%;
     width: 355px;
     flex-direction: column;
@@ -47,7 +53,6 @@ body {
   height: 100%;
   overflow: hidden;
   cursor: pointer;
-  flex-grow: 1;
 }
 .card-1 .image {
   width: 100%;
@@ -72,13 +77,12 @@ body {
   flex-direction: column;
   gap: 2rem;
   background: hsl(0, 0%, 100%);
-  flex-grow: 1;
 }
 
 .card-2 h4,
 p {
   color: hsl(228, 12%, 48%);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Monteserrat", sans-serif;
   font-weight: 500;
 }
 
@@ -138,6 +142,7 @@ p {
 .attribution {
   position: fixed;
   bottom: 0;
+  left: 0;
   height: 50px;
   display: flex;
   justify-content: center;
