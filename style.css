@@ -1,0 +1,154 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper {
+  height: 500px;
+  width: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    height: 80%;
+    width: 355px;
+    flex-direction: column;
+  }
+  .card-1 .image {
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/image-product-mobile.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.card-1 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  flex-grow: 1;
+}
+.card-1 .image {
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/image-product-desktop.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.card-1:hover .image {
+  transform: scale(1.5);
+}
+
+.card-2 {
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: hsl(0, 0%, 100%);
+  flex-grow: 1;
+}
+
+.card-2 h4,
+p {
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.card-2 h4 {
+  text-transform: uppercase;
+}
+
+.card-2 p {
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+.card-2 h1 {
+  font-family: "Fraunces", sans-serif;
+  line-height: 2rem;
+}
+
+.card-2 .prices {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card-2 .prices .currentPrice {
+  font-family: "Fraunces", sans-serif;
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+}
+
+.card-2 .prices .originalPrice {
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.addToCart {
+  padding: 1rem;
+  background: hsl(158, 36%, 37%);
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Monteserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.addToCart:hover {
+  background: hsl(158, 41%, 25%);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: black;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: white;
+}
